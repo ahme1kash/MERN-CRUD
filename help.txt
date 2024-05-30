@@ -1,0 +1,19 @@
+Run the app by using npm run app.
+
+But before that in the root folder i.e. C:\users\username\Project\MERN-Crud
+=> Considering MERn-Crud is the base folder which contains client/frontend and server/backend folders
+
+Navigate to Root path  C:\users\<username>\Project\MERN-Crud
+install concurrently ==> npm i concurrently
+
+Now Copy below code in package.json of root folder
+
+{
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "app": "concurrently \"cd frontend && npm start\" \"cd backend && nodemon index.js\""
+  }
+}
+Run the app by executing command-- npm run app.

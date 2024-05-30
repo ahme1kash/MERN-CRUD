@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+  font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+
+  /* background-image: radial-gradient(rgb(253, 222, 217), rgb(165, 230, 44)); */
+  /* background-color: rgb(53, 222, 222); */
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes example {
+  from {
+    /* background-color: rgb(255, 148, 129); */
+    background-image: linear-gradient(to right, rgb(133, 204, 97), rgb(255, 209, 201));
+  }
+
+  to {
+    /* background-color: rgb(147, 255, 147); */
+    background-image: linear-gradient(to right, rgb(255, 209, 201), rgb(133, 204, 97));
+  }
+}

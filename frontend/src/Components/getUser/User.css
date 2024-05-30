@@ -1,0 +1,109 @@
+.userTable {
+    width: 105vh;
+    background-color: rgb(229, 255, 237);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+    border-radius: 10px;
+    margin: 10rem auto;
+}
+
+.editLink {
+    text-decoration: none;
+    background-image: linear-gradient(to right, rgba(31, 34, 134, 0.785), rgb(8, 113, 8));
+    color: rgb(255, 255, 255);
+    font-size: large;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.editLink:hover {
+    color: rgb(165, 255, 147);
+    background-color: rgb(255, 255, 255)
+}
+
+
+.deleteButton {
+    text-decoration: none;
+    background-image: linear-gradient(to right, rgb(119, 222, 241), rgba(209, 77, 33, 0.785));
+    color: rgb(16, 57, 0);
+    font-size: large;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+    padding: 10px 1.5px;
+    border-color: rgb(204, 18, 18);
+    width: 70%;
+    cursor: pointer;
+    /* margin-left: 2px; */
+}
+
+.deleteButton:hover {
+    color: red
+}
+
+
+
+.userTable table {
+    margin-top: 5em;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.addNew {
+    text-decoration: none;
+    background-color: rgb(10, 61, 105);
+    color: rgb(64, 223, 6);
+    font-size: large;
+    font-weight: 500;
+    padding: 1em;
+    float: left;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.deleteAll {
+    text-decoration: none;
+    background-color: rgb(214, 17, 17);
+    color: rgb(255, 255, 255);
+    font-size: large;
+    font-weight: 500;
+    padding: 1em;
+    border-radius: 5px;
+    float: right;
+    border: none;
+    cursor: pointer;
+}
+
+.addNew:hover {
+    background-color: rgb(11, 105, 192);
+    color: white
+}
+
+.deleteAll:hover {
+    background-color: rgb(192, 11, 120);
+    color: rgb(36, 25, 25)
+}
+
+.userTable table thead th {
+    background-color: rgb(5, 0, 91);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.userTable table tbody td {
+    padding: 10px;
+    text-align: center;
+}
+
+.actionButtons .editLink {
+    margin: 0px 10px;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    height: 3.5em;
+    background-image: radial-gradient(rgb(101, 124, 254), rgb(68, 185, 123));
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: -2.5rem;
+}

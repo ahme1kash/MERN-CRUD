@@ -1,0 +1,106 @@
+.addUser {
+    width: 40vw;
+    height: 60vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 0.6rem rgb(223, 249, 245);
+    border-radius: 10px;
+    margin: 10em auto;
+
+}
+
+.addUser h3 {
+    color: rgb(6, 12, 57);
+    padding: 12px 0px;
+    background-color: rgb(33, 146, 88);
+}
+
+
+
+.addUserForm input {
+    width: 25vw;
+    margin: auto;
+}
+
+
+
+label {
+    text-align: center;
+
+}
+
+input {
+    text-align: center
+}
+
+
+
+.addUser h3 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+
+
+.addUserForm .inputGroup {
+    height: 8vh;
+    width: 32vw;
+    display: flex;
+    /* left: 52em; */
+    margin-left: 3em;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.addUserForm .inputGroup label {
+    width: 11vw;
+
+}
+
+.addUserForm .inputGroup input {
+    padding: 10px;
+    overflow: auto;
+
+}
+
+.addUserForm .inputGroup button {
+    /* margin-top: 1rem; */
+    width: 22vw;
+    height: 3.2rem;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 1.5rem;
+    /* background-image: linear-gradient(to right, rgb(158, 44, 54), rgb(62, 171, 153)); */
+    background-color: #008de5;
+    border: 0;
+    outline: none;
+    /* padding: 14px; */
+    cursor: pointer;
+    border-radius: 5px;
+    margin: auto;
+    margin-right: 2.1em;
+    margin-top: 1rem;
+}
+
+.back {
+    background-color: #104a5a;
+    border: none;
+    color: white;
+    padding: 15px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.addUserForm {
+    margin-top: 1em;
+}
+
+input {
+    font-size: 18px;
+}
