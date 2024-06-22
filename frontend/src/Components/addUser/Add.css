@@ -18,19 +18,9 @@
 
 .addUserForm input {
     width: 25vw;
-    margin: auto;
 }
 
 
-
-label {
-    text-align: center;
-
-}
-
-input {
-    text-align: center
-}
 
 
 
@@ -47,10 +37,7 @@ input {
     height: 8vh;
     width: 32vw;
     display: flex;
-    /* left: 52em; */
     margin-left: 3em;
-
-    justify-content: center;
     align-items: center;
 }
 
