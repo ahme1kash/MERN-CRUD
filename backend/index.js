@@ -21,7 +21,7 @@ mongoose.connect(URL).then(() => {
 }).catch((err) => { console.log(mongoose.Error) })
 
 
-app.use("/use", () => {
+app.use("/use", (req, res) => {
     res.json({
         success: true,
         message: "Server is set up successfully"
