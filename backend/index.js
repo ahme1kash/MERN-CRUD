@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.options("", cors());
 app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://mern-crud-frontend-app.vercel.app");
+    res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
     res.header("Access-Control-Allow-Headers", "Origin,X-Requested-With, X-CallbackType, Content-Type, Accept");
     res.header("Cache-Control", "no-cache");
@@ -32,17 +32,6 @@ mongoose.connect(URL).then(() => {
         console.log(`SERVER is up and running on Port - ${PORT}`)
     })
 }).catch((err) => { console.log(mongoose.Error) })
-try {
-    app.use(cors({
-        origin: ['https://mern-crud-frontend-app.vercel.app'],
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        credentials: true
-
-    }));
-}
-catch (err) {
-    console.log(err)
-}
 app.use("/use", (req, res) => {
     res.json({
         success: true,
