@@ -13,6 +13,7 @@ const Update = () => {
     const navigate = useNavigate()
     const { id } = useParams();
     const [user, setUser] = useState(users)
+    axios.defaults.withCredentials = true;
     const inputChangeHandler = (e) => {
         const { name, value } = e.target
         setUser({ ...user, [name]: value })

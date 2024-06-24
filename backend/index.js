@@ -21,7 +21,9 @@ mongoose.connect(URL).then(() => {
 }).catch((err) => { console.log(mongoose.Error) })
 
 app.use(cors({
-    origin: 'https://mern-crud-app-frontend-psi.vercel.app'
+    origin: 'https://mern-crud-app-frontend-psi.vercel.app',
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true
 }));
 app.use("/use", (req, res) => {
     res.json({

@@ -12,6 +12,7 @@ const Add = () => {
         address: "",
     }
     const [user, setUser] = useState(users);
+    axios.defaults.withCredentials = true;
     const inputHandler = (e) => {
         const { name, value } = e.target
         setUser({ ...user, [name]: value })

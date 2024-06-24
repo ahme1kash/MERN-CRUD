@@ -7,6 +7,7 @@ import toast from 'react-hot-toast';
 // const navigate = useNavigate()
 const User = () => {
     const [users, setUsers] = useState([]);
+    axios.defaults.withCredentials = true;
     useEffect(() => {
         const fetchData = async () => {
             let response = await axios.get("https://mern-crud-backend-app.vercel.app/getAllUser")
