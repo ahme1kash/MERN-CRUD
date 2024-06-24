@@ -19,13 +19,17 @@ mongoose.connect(URL).then(() => {
         console.log(`SERVER is up and running on Port - ${PORT}`)
     })
 }).catch((err) => { console.log(mongoose.Error) })
+try {
+    app.use(cors({
+        origin: ['https://mern-crud-frontend-app.vercel.app/'],
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        credentials: true
 
-app.use(cors({
-    origin: ['https://mern-crud-frontend-app.vercel.app/'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
-
-}));
+    }));
+}
+catch (err) {
+    console.log(err)
+}
 app.use("/use", (req, res) => {
     res.json({
         success: true,
