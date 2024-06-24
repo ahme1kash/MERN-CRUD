@@ -9,7 +9,7 @@ const User = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
-            let response = await axios.get("https://mern-crud-backend-app.vercel.app/api/getAllUser")
+            let response = await axios.get("https://mern-crud-backend-app.vercel.app/getAllUser")
             setUsers(response.data.user)
         }
         fetchData();
@@ -18,7 +18,7 @@ const User = () => {
     }, [])
     const deleteUser = async (userId) => {
         try {
-            await axios.delete(`https://mern-crud-backend-app.vercel.app/api/delete/${userId}`)
+            await axios.delete(`https://mern-crud-backend-app.vercel.app/delete/${userId}`)
             setUsers((prevUser) => {
                 return prevUser.filter((user) => user._id !== userId)
             })
@@ -34,7 +34,7 @@ const User = () => {
     }
     const deleteAll = async () => {
         try {
-            await axios.delete("https://mern-crud-backend-app.vercel.app/api/deleteAllUser")
+            await axios.delete("https://mern-crud-backend-app.vercel.app/deleteAllUser")
             setUsers([])
 
 

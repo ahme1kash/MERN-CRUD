@@ -29,4 +29,4 @@ app.use("/use", (req, res) => {
         message: "Server is set up successfully"
     })
 })
-app.use("/api", userRoutes)
+// app.use("/api", userRoutes)
