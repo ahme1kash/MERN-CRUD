@@ -7,7 +7,6 @@ const dotenv = require("dotenv");// import dotenv from "dotenv";
 const cors = require("cors") // import cors from "cors";
 const app = express();
 dotenv.config();
-const userRoutes = require("./routes/userRoute")
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -36,4 +35,3 @@ app.use("/use", (req, res) => {
         message: "Server is set up successfully"
     })
 })
-app.use("/api", userRoutes)
