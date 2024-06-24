@@ -6,6 +6,7 @@ const bodyParser = require("body-parser") //import bodyParser from "body-Parser"
 const dotenv = require("dotenv");// import dotenv from "dotenv";
 const cors = require("cors") // import cors from "cors";
 const app = express();
+const path = require("path");
 dotenv.config();
 app.use(bodyParser.json());
 const corsOptions = {
@@ -18,7 +19,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
-
+app.use(express.static(path.join(__dirname, "./frontend/build")))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './frontend/build/index.html'))
+})
 const PORT = process.env.PORT || 3010;
 const URL = process.env.MONGO_URL
 mongoose.connect(URL).then(() => {
