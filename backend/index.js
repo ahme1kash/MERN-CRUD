@@ -22,6 +22,9 @@ mongoose.connect(URL).then(() => {
 
 app.use(cors({
     origin: ['https://mern-crud-app-frontend-psi.vercel.app'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+
 }));
 app.use("/use", (req, res) => {
     res.json({
