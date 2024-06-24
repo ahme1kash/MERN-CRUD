@@ -23,7 +23,7 @@ const Add = () => {
     const submitForm = async (e) => {
         try {
             e.preventDefault();
-            await axios.post("https://mern-crud-backend-app.vercel.app/create", user)
+            await axios.post("https://mern-crud-54um.onrender.com/create", user)
             toast.success("New User Added Successfully", { position: "top-right" })
             navigate("/")
         }
