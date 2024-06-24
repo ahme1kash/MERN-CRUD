@@ -10,7 +10,7 @@ dotenv.config();
 app.use(bodyParser.json());
 const corsOptions = {
     origin: '*', // Allow only requests from this origin
-    methods: 'GET,POST,PUT,DELETE', // Allow only these methods
+    methods: 'GET,POST,PUT,DELETE,HEADERS', // Allow only these methods
     allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
 };
 
