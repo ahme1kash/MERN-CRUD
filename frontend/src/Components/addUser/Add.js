@@ -12,18 +12,20 @@ const Add = () => {
         address: "",
     }
     const [user, setUser] = useState(users);
-    axios.defaults.withCredentials = true;
     const inputHandler = (e) => {
         const { name, value } = e.target
         setUser({ ...user, [name]: value })
         // console.log(user)
 
     }
+    // https://mern-crud-54um.onrender.com
     const navigate = useNavigate()
     const submitForm = async (e) => {
         try {
             e.preventDefault();
-            await axios.post("https://mern-crud-54um.onrender.com/create", user)
+            await axios.post("http://localhost:3010/api/create", user)
+            // console.log(z)
+            // res.status(200).json({ message: 'Resource created successfully!' });
             toast.success("New User Added Successfully", { position: "top-right" })
             navigate("/")
         }

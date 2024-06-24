@@ -11,20 +11,15 @@ dotenv.config();
 app.use(bodyParser.json());
 const corsOptions = {
     origin: '*', // Allow only requests from this origin
-    methods: 'GET,POST,PUT,DELETE,HEADERS', // Allow only these methods
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'HEAD'], // Allow only these methods
     allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
 };
 
 // Use CORS middleware with specified options
 app.use(cors(corsOptions));
-
-
-// app.use(express.static(path.join(__dirname, "../frontend/build")))
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../frontend/build/index.html'))
-// })
 const PORT = process.env.PORT || 3010;
 const URL = process.env.MONGO_URL
+app.use("/api", require("./routes/userRoute"));
 mongoose.connect(URL).then(() => {
     console.log("DB connected successfully")
     app.listen(PORT, () => {

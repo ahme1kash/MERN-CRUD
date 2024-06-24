@@ -7,16 +7,16 @@ import toast from 'react-hot-toast';
 // const navigate = useNavigate()
 const User = () => {
     const [users, setUsers] = useState([]);
-    axios.defaults.withCredentials = true;
+    // axios.defaults.withCredentials = true;
     useEffect(() => {
         const fetchData = async () => {
-            try {
-                let response = await axios.get("https://mern-crud-54um.onrender.com/getAllUser")
-                setUsers(response.data.user)
-            }
-            catch (err) {
-                console.log(err)
-            }
+
+            let response = await axios.get("http://localhost:3010/api/getAllUser")
+            setUsers(response.data.user)
+
+
+            // console.log(err)
+
         }
         fetchData();
 
@@ -24,7 +24,7 @@ const User = () => {
     }, [])
     const deleteUser = async (userId) => {
         try {
-            await axios.delete(`https://mern-crud-54um.onrender.com/delete/${userId}`)
+            await axios.delete(`http://localhost:3010/api/delete/${userId}`)
             setUsers((prevUser) => {
                 return prevUser.filter((user) => user._id !== userId)
             })
@@ -40,7 +40,7 @@ const User = () => {
     }
     const deleteAll = async () => {
         try {
-            await axios.delete("https://mern-crud-54um.onrender.com/deleteAllUser")
+            await axios.delete("http://localhost:3010/api/deleteAllUser")
             setUsers([])
 
 

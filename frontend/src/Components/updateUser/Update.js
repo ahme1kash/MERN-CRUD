@@ -13,7 +13,7 @@ const Update = () => {
     const navigate = useNavigate()
     const { id } = useParams();
     const [user, setUser] = useState(users)
-    axios.defaults.withCredentials = true;
+    // axios.defaults.withCredentials = true;
     const inputChangeHandler = (e) => {
         const { name, value } = e.target
         setUser({ ...user, [name]: value })
@@ -21,7 +21,7 @@ const Update = () => {
     }
     useEffect(() => {
         const fetchData = async () => {
-            let response = await axios.get(`https://mern-crud-54um.onrender.com/getSingleUser/${id}`)
+            let response = await axios.get(`http://localhost:3010/api/getSingleUser/${id}`)
             setUser(response.data.user)
         }
         fetchData();
@@ -29,7 +29,7 @@ const Update = () => {
     const submitForm = async (e) => {
         try {
             e.preventDefault();
-            await axios.put(`https://mern-crud-54um.onrender.com/updateUser/${id}`, user)
+            await axios.put(`http://localhost:3010/api/updateUser/${id}`, user)
             // console.log(response)
             toast.success("User Updated Successfully", { position: "top-right" })
             navigate("/")
