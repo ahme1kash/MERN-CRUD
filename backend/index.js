@@ -8,20 +8,15 @@ const cors = require("cors") // import cors from "cors";
 const app = express();
 dotenv.config();
 app.use(bodyParser.json());
-app.use(cors());
-app.options("", cors());
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-    res.header("Access-Control-Allow-Headers", "Origin,X-Requested-With, X-CallbackType, Content-Type, Accept");
-    res.header("Cache-Control", "no-cache");
-    if ("OPTIONS" == req.method) {
-        res.send(200);
-    }
-    else {
-        next();
-    }
-});
+const corsOptions = {
+    origin: '*', // Allow only requests from this origin
+    methods: 'GET,POST,PUT,DELETE', // Allow only these methods
+    allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
+};
+
+// Use CORS middleware with specified options
+app.use(cors(corsOptions));
+
 
 
 const PORT = process.env.PORT || 3010;
