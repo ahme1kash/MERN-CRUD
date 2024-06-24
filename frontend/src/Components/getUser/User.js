@@ -10,8 +10,13 @@ const User = () => {
     axios.defaults.withCredentials = true;
     useEffect(() => {
         const fetchData = async () => {
-            let response = await axios.get("https://mern-crud-backend-app.vercel.app/getAllUser")
-            setUsers(response.data.user)
+            try {
+                let response = await axios.get("https://mern-crud-backend-app.vercel.app/getAllUser")
+                setUsers(response.data.user)
+            }
+            catch (err) {
+                console.log(err)
+            }
         }
         fetchData();
 
