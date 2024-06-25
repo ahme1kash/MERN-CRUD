@@ -32,7 +32,7 @@ mongoose.connect(URL).then(() => {
         console.log(`SERVER is up and running on Port - ${PORT}`)
     })
 }).catch((err) => { console.log(mongoose.Error) })
-app.use("/use", (req, res) => {
+app.get("/use", (req, res) => {
     res.json({
         success: true,
         message: "Server is set up successfully"
