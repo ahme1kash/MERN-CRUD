@@ -27,8 +27,7 @@ const Add = () => {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
-                },
-                withCredentials: true
+                }
             })
             // console.log(z)
             // res.status(200).json({ message: 'Resource created successfully!' });
@@ -36,7 +35,7 @@ const Add = () => {
             navigate("/")
         }
         catch (err) {
-            console.log(err)
+            console.log("Error encountered in subitting data", err)
             toast.error("Data failed to get submitted successfully", { position: "top-right" })
             navigate("/")
         }
