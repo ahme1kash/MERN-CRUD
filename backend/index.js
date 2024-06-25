@@ -18,7 +18,8 @@ const corsOptions = {
         "Origin",
         "X-Requested-With",
         "Content-Length"
-    ]
+    ],
+    credentials: true
 };
 
 // Use CORS middleware with specified options
