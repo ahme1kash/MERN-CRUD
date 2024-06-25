@@ -9,7 +9,7 @@ const dotenv = require("dotenv");// import dotenv from "dotenv";
 dotenv.config();
 app.use(bodyParser.json());
 const corsOptions = {
-    origin: ['https://mern-crud-app-introduction.vercel.app/'],   // Only Allowing request from the domain of frontend deployment
+    origin: ['https://mern-crud-app-introduction.vercel.app'],   // Only Allowing request from the domain of frontend deployment
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'HEAD'], // Allow only these methods
     allowedHeaders: [
         "Content-Type",
