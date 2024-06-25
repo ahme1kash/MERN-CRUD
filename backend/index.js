@@ -27,12 +27,7 @@ app.use(cors(corsOptions));
 const PORT = process.env.PORT || 3010;
 const URL = process.env.MONGO_URL
 app.use("/api", require("./routes/userRoute"));
-app.get("/use", (req, res) => {
-    res.json({
-        success: true,
-        message: "Server is set up successfully"
-    })
-})
+
 mongoose.connect(URL).then(() => {
     console.log("DB connected successfully")
     app.listen(PORT, () => {
@@ -40,3 +35,9 @@ mongoose.connect(URL).then(() => {
     })
 }).catch((err) => { console.log(mongoose.Error) })
 
+app.get("/use", (req, res) => {
+    res.json({
+        success: true,
+        message: "Server is set up successfully"
+    })
+})
