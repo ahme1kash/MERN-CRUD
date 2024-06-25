@@ -27,7 +27,8 @@ const Add = () => {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
-                }
+                },
+                withCredentials: true
             })
             // console.log(z)
             // res.status(200).json({ message: 'Resource created successfully!' });
