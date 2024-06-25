@@ -23,7 +23,12 @@ const Add = () => {
     const submitForm = async (e) => {
         try {
             e.preventDefault();
-            await axios.post("https://mern-crud-backend-app.vercel.app/api/create", user)
+            await axios.post("https://mern-crud-backend-app.vercel.app/api/create", user, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            })
             // console.log(z)
             // res.status(200).json({ message: 'Resource created successfully!' });
             toast.success("New User Added Successfully", { position: "top-right" })

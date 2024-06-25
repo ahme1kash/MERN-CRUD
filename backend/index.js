@@ -12,7 +12,13 @@ app.use(bodyParser.json());
 const corsOptions = {
     origin: '*', // Allow only requests from this origin
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'HEAD'], // Allow only these methods
-    allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
+    allowedHeaders: [
+        "Content-Type",
+        "Accept",
+        "Origin",
+        "X-Requested-With",
+        "Content-Length"
+    ]
 };
 
 // Use CORS middleware with specified options
