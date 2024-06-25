@@ -23,7 +23,7 @@ const Add = () => {
     const submitForm = async (e) => {
         try {
             e.preventDefault();
-            await axios.post("https://mern-crud-backend-tau.vercel.app/api/create", user, {
+            await axios.post("https://mern-crud-backend-black.vercel.app/api/create", user, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
